@@ -1002,6 +1002,7 @@ video {
   color: white;
   font-family: Open Sans, sans-serif;
   padding-bottom: 80px; /* Add padding for mobile nav */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Sidebar */
@@ -1073,6 +1074,8 @@ video {
 /* Main Content */
 .main-content {
   flex: 1;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -1081,6 +1084,8 @@ video {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -1119,6 +1124,8 @@ video {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .stories-section::-webkit-scrollbar {
@@ -1129,6 +1136,7 @@ video {
   display: flex;
   gap: 12px;
   padding-bottom: 8px;
+  width: max-content; /* Allow container to be as wide as needed */
 }
 
 @media (min-width: 768px) {
@@ -1171,6 +1179,8 @@ video {
   gap: 16px;
   padding: 0 16px;
   margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -1205,6 +1215,8 @@ video {
   gap: 8px;
   padding: 0 16px;
   margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -1245,12 +1257,15 @@ video {
   padding: 16px;
   transition: background-color 0.15s;
   cursor: pointer;
+  width: calc(100% - 32px);
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .balance-card {
     margin: 0 32px 16px;
     padding: 24px;
+    width: calc(100% - 64px);
   }
 }
 
@@ -1291,6 +1306,8 @@ video {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -1324,12 +1341,15 @@ video {
   align-items: center;
   gap: 16px;
   overflow: hidden;
+  width: calc(100% - 32px);
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .promo-banner {
     margin: 0 32px 32px;
     padding: 24px;
+    width: calc(100% - 64px);
   }
 }
 
@@ -1458,6 +1478,8 @@ video {
   padding-top: 4px;
   padding-bottom: 16px;
   z-index: 50;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -1470,6 +1492,9 @@ video {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Notification Badge */
@@ -1716,6 +1741,7 @@ video {
   padding: 8px 16px;
   margin: 16px;
   width: calc(100% - 32px);
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -1746,12 +1772,14 @@ video {
   overflow-x: auto;
   padding-bottom: 8px;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: calc(100% - 32px);
+  box-sizing: border-box;
 }
 
 .filter-buttons::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 .filter-button {
