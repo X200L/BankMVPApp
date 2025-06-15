@@ -1191,7 +1191,7 @@ video {
   display: flex;
   gap: 12px;
   padding-bottom: 8px;
-  width: max-content; /* Allow container to be as wide as needed */
+  width: max-content;
 }
 
 @media (min-width: 768px) {
@@ -1205,7 +1205,7 @@ video {
 .story-card {
   width: 112px;
   height: 96px;
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -1215,7 +1215,6 @@ video {
   cursor: pointer;
   transition: transform 0.15s;
   background: rgba(31, 41, 55, 0.8);
-  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1251,7 +1250,7 @@ video {
 
 .stats-card {
   background-color: rgba(31, 41, 55, 0.8);
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 16px;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
@@ -1299,7 +1298,7 @@ video {
   width: 56px;
   height: 56px;
   background-color: rgba(31, 41, 55, 0.8);
-  border-radius: 24px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1316,7 +1315,7 @@ video {
 /* Balance Card */
 .balance-card {
   background-color: rgba(31, 41, 55, 0.8);
-  border-radius: 24px;
+  border-radius: 16px;
   margin: 0 16px 16px;
   padding: 16px;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -1400,7 +1399,7 @@ video {
 /* Promo Banner */
 .promo-banner {
   background: linear-gradient(135deg, #F59E0B, #FBBF24);
-  border-radius: 24px;
+  border-radius: 16px;
   margin: 0 16px 24px;
   padding: 20px;
   position: relative;
@@ -2044,7 +2043,7 @@ h1, h2, h3, .text-xl, .text-2xl {
   max-width: 300px;
   background: rgba(31, 41, 55, 0.95);
   backdrop-filter: blur(10px);
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2183,5 +2182,33 @@ h1, h2, h3, .text-xl, .text-2xl {
 
   .suggestion-chip:hover {
     background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .stats-section {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .stats-section::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stats-card {
+    flex: 0 0 calc(100% - 32px);
+    scroll-snap-align: start;
+    margin-right: 16px;
+  }
+
+  .stats-card:last-child {
+    margin-right: 0;
   }
 } 
