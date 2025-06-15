@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тамагочи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="main-content">
+            <header class="header">
+                <a href="expenses.html">
+                    <span class="material-symbols-outlined text-white">close</span>
+                </a>
+                <h1 class="text-white text-xl font-semibold">Тамагочи</h1>
+                <span class="material-symbols-outlined text-blue-400">pets</span>
+            </header>
+
+            <div class="tamagotchi-container">
+                <!-- Финансовый совет -->
+                <div class="financial-tip">
+                    <span class="material-symbols-outlined tip-icon">lightbulb</span>
+                    <div class="tip-content">
+                        <h3>Совет от Евгения-</h3>
+                        <p id="financial-tip-text">Загрузка совета...</p>
+                    </div>
+                </div>
+
+                <div class="tamagotchi-pet">
+                    <div class="pet-avatar">
+                        <img src="evgen.png" alt="Piggy Bank" class="pet-image">
+                        <div class="pet-level-badge">5</div>
+                    </div>
+                    <div class="pet-status">
+                        <p class="pet-name">Копилка</p>
+                        <p class="pet-level">Уровень сбережений: 5</p>
+                        <div class="pet-mood">
+                            <span class="material-symbols-outlined">sentiment_very_satisfied</span>
+                            <span>Отличное настроение!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pet-stats">
+                    <div class="stat-item">
+                        <span class="material-symbols-outlined">savings</span>
+                        <div class="stat-info">
+                            <div class="progress-bar">
+                                <div class="progress-fill savings-progress" style="width: 85%;"></div>
+                            </div>
+                            <p>Накопления</p>
+                            <span class="stat-value">85 000 ₽</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="material-symbols-outlined">trending_up</span>
+                        <div class="stat-info">
+                            <div class="progress-bar">
+                                <div class="progress-fill savings-progress" style="width: 60%;"></div>
+                            </div>
+                            <p>Инвестиции</p>
+                            <span class="stat-value">45 000 ₽</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="material-symbols-outlined">payments</span>
+                        <div class="stat-info">
+                            <div class="progress-bar">
+                                <div class="progress-fill savings-progress" style="width: 90%;"></div>
+                            </div>
+                            <p>Бюджет</p>
+                            <span class="stat-value">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pet-achievements">
+                    <h3>Достижения</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <span class="material-symbols-outlined">emoji_events</span>
+                            <span>Первые накопления</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            <span>Начинающий инвестор</span>
+                        </div>
+                        <div class="achievement-item locked">
+                            <span class="material-symbols-outlined">savings</span>
+                            <span>Финансовая подушка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pet-actions">
+                    <button class="action-button">
+                        <span class="material-symbols-outlined">savings</span>
+                        Отложить
+                    </button>
+                    <button class="action-button">
+                        <span class="material-symbols-outlined">trending_up</span>
+                        Инвестировать
+                    </button>
+                    <button class="action-button">
+                        <span class="material-symbols-outlined">analytics</span>
+                        Аналитика
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <div class="nav-items">
+                <a href="#" class="nav-item active">
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="text-xs">Платежи</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">credit_card</span>
+                    <span class="text-xs">Карты</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">trending_up</span>
+                    <span class="text-xs">Инвестиции</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">more_horiz</span>
+                    <span class="text-xs">Еще</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text-xs">Профиль</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        const financialTips = [
+            {
+                text: "Откладывайте 20% от каждого дохода - это поможет создать финансовую подушку безопасности",
+                icon: "savings"
+            },
+            {
+                text: "Ведите учет расходов - это поможет найти скрытые траты и оптимизировать бюджет",
+                icon: "receipt_long"
+            },
+            {
+                text: "Создайте резервный фонд на 3-6 месяцев расходов для защиты от непредвиденных ситуаций",
+                icon: "security"
+            },
+            {
+                text: "Диверсифицируйте инвестиции - не храните все яйца в одной корзине",
+                icon: "trending_up"
+            },
+            {
+                text: "Используйте кэшбэк и бонусные программы для получения дополнительного дохода",
+                icon: "payments"
+            },
+            {
+                text: "Планируйте крупные покупки заранее и откладывайте на них постепенно",
+                icon: "shopping_cart"
+            },
+            {
+                text: "Регулярно пересматривайте подписки и отменяйте неиспользуемые сервисы",
+                icon: "subscriptions"
+            },
+            {
+                text: "Используйте правило 50/30/20: 50% на необходимые расходы, 30% на желания, 20% на сбережения",
+                icon: "pie_chart"
+            },
+            {
+                text: "Инвестируйте в свое образование - это лучшая инвестиция в будущее",
+                icon: "school"
+            },
+            {
+                text: "Создайте финансовый план на год вперед с конкретными целями и сроками",
+                icon: "calendar_month"
+            }
+        ];
+
+        function getRandomTip() {
+            const randomIndex = Math.floor(Math.random() * financialTips.length);
+            const tip = financialTips[randomIndex];
+            
+            // Обновляем текст совета
+            document.getElementById('financial-tip-text').textContent = tip.text;
+            
+            // Обновляем иконку
+            const tipIcon = document.querySelector('.tip-icon');
+            tipIcon.textContent = tip.icon;
+        }
+
+        // Вызываем функцию при загрузке страницы
+        document.addEventListener('DOMContentLoaded', getRandomTip);
+    </script>
+</body>
+</html> 
