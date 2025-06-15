@@ -62,6 +62,11 @@
             <!-- Stories Section -->
             <div class="stories-section px-4 md:px-8 overflow-x-auto">
               <div class="stories-container flex space-x-3 pb-2 md:grid md:grid-cols-4 md:gap-4">
+              
+                <div class="story-card w-28 h-24 md:w-full md:h-32 bg-red-800 rounded-2xl p-3 flex flex-col justify-between relative overflow-hidden cursor-pointer transform transition-transform hover:scale-[1.02]">
+                  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wfGVufDB8fHx8MTc0OTk0Nzk5NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Coffee Shop" class="absolute inset-0 w-full h-full object-cover opacity-70"/>
+                  <div class="story-text text-xs md:text-sm text-white leading-tight z-10">Ты потратил на кофе 2 600 ₽ — столько же стоит подписка на Кинопоиск на 3 месяца</div>
+                </div>
                 <div class="story-card w-28 h-24 md:w-full md:h-32 bg-green-800 rounded-2xl p-3 flex flex-col justify-between relative overflow-hidden cursor-pointer transform transition-transform hover:scale-[1.02]">
                   <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MXwxfHNlYXJjaHwxfHxtb25leXxlbnwwfHx8fDE3NDk5NDc5Mzl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Money" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30"/>
                   <div class="story-text text-xs md:text-sm text-white leading-tight z-10">Получите деньги за эрудицию</div>
@@ -77,10 +82,7 @@
                   </svg>
                   <div class="story-text text-xs md:text-sm text-white leading-tight z-10">Разбираемся с чужими деньгами</div>
                 </div>
-                <div class="story-card w-28 h-24 md:w-full md:h-32 bg-yellow-800 rounded-2xl p-3 flex flex-col justify-between relative overflow-hidden cursor-pointer transform transition-transform hover:scale-[1.02]">
-                  <img src="https://images.unsplash.com/photo-1570323085210-cc920ab3f50f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzkyNDZ8MHwxfHNlYXJjaHwxfHxmaW5hbmNlJTIwYmxvZ3xlbnwwfHx8fDE3NDk5NDc5OTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Finance Blog" class="absolute inset-0 w-full h-full object-cover opacity-70"/>
-                  <div class="story-text text-xs md:text-sm text-white leading-tight z-10">Читайте Т-Блог в Пульсе</div>
-                </div>
+                
               </div>
               <div class="stories-footer flex flex-col items-center mt-1 mb-4">
                 <div class="footer-text text-xs text-gray-400 md:text-sm">Пульс — соцсеть про деньги и лайфстайл</div>
@@ -92,22 +94,103 @@
             </div>
 
             <!-- Stats Cards -->
-            <div class="stats-section grid grid-cols-2 gap-4 px-4 mb-4 md:px-8 md:gap-6 lg:grid-cols-2">
-              <a href="expenses.html" class="stats-card bg-gray-900 rounded-3xl p-4 md:p-6 hover:bg-gray-800 transition-colors cursor-pointer block">
-                <div class="card-title text-lg font-bold mb-1">Все операции</div>
-                <div class="card-subtitle text-sm text-gray-300 mb-2">Трат в июне<br/>6 183 ₽</div>
-                <div class="progress-bar h-2 w-full bg-gradient-to-r from-cyan-400 via-pink-500 to-purple-500 rounded-full"></div>
-              </a>
-              <div class="stats-card bg-gray-900 rounded-3xl p-4 md:p-6 relative hover:bg-gray-800 transition-colors cursor-pointer">
-                <div class="card-title text-lg font-bold mb-1">Кэшбэк и бонусы</div>
-                <div class="notification-badge absolute top-3 right-3 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-xs animate-pulse">1</div>
-                <div class="bonus-cards flex space-x-2 mt-4">
-                  <div class="bonus-card w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center transform hover:scale-110 transition-transform">
-                    <span class="text-xl">🦁</span>
+            <div class="stats-section grid grid-cols-1 md:grid-cols-2 gap-4 px-4 mb-4 md:px-8 md:gap-6">
+              <a href="expenses.html" class="stats-card bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-4 md:p-6 hover:shadow-lg transition-all cursor-pointer block">
+                <div class="card-header flex justify-between items-center mb-4">
+                  <div class="card-title text-lg font-bold">Финансовая аналитика</div>
+                  <div class="card-period text-sm text-gray-400">Июнь 2025</div>
+                </div>
+                <div class="analytics-grid grid grid-cols-2 gap-4 mb-4">
+                  <div class="analytics-item">
+                    <div class="analytics-label text-sm text-gray-400 mb-1">Расходы</div>
+                    <div class="analytics-value text-xl font-bold text-red-400">6 183 ₽</div>
+                    <div class="analytics-change text-xs text-gray-400">+12% к прошлому месяцу</div>
                   </div>
-                  <div class="bonus-card w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center text-xs font-bold transform hover:scale-110 transition-transform">ИГА</div>
-                  <div class="bonus-card w-10 h-10 bg-yellow-300 rounded-xl flex items-center justify-center transform hover:scale-110 transition-transform">
-                    <span class="text-xl">👑</span>
+                  <div class="analytics-item">
+                    <div class="analytics-label text-sm text-gray-400 mb-1">Доходы</div>
+                    <div class="analytics-value text-xl font-bold text-green-400">15 000 ₽</div>
+                    <div class="analytics-change text-xs text-gray-400">+5% к прошлому месяцу</div>
+                  </div>
+                </div>
+                <div class="expenses-breakdown mb-4">
+                  <div class="breakdown-header flex justify-between items-center mb-2">
+                    <div class="breakdown-title text-sm font-medium">Топ категории расходов</div>
+                    <div class="breakdown-more text-xs text-blue-400">Подробнее</div>
+                  </div>
+                  <div class="breakdown-items space-y-2">
+                    <div class="breakdown-item flex items-center">
+                      <div class="category-icon w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center mr-3">
+                        <span class="material-symbols-outlined text-red-400">restaurant</span>
+                      </div>
+                      <div class="category-info flex-1">
+                        <div class="category-name text-sm">Еда и кафе</div>
+                        <div class="progress-bar h-1.5 w-full bg-gray-700 rounded-full mt-1">
+                          <div class="progress-fill h-full bg-red-400 rounded-full" style="width: 75%"></div>
+                        </div>
+                      </div>
+                      <div class="category-amount text-sm font-medium">2 450 ₽</div>
+                    </div>
+                    <div class="breakdown-item flex items-center">
+                      <div class="category-icon w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center mr-3">
+                        <span class="material-symbols-outlined text-blue-400">shopping_bag</span>
+                      </div>
+                      <div class="category-info flex-1">
+                        <div class="category-name text-sm">Шоппинг</div>
+                        <div class="progress-bar h-1.5 w-full bg-gray-700 rounded-full mt-1">
+                          <div class="progress-fill h-full bg-blue-400 rounded-full" style="width: 45%"></div>
+                        </div>
+                      </div>
+                      <div class="category-amount text-sm font-medium">1 850 ₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer flex justify-between items-center">
+                  <div class="savings-info">
+                    <div class="savings-label text-sm text-gray-400">Накопления</div>
+                    <div class="savings-value text-lg font-bold text-green-400">8 817 ₽</div>
+                  </div>
+                  <div class="view-all text-sm text-blue-400 flex items-center">
+                    Все операции
+                    <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                  </div>
+                </div>
+              </a>
+              <div class="stats-card bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-4 md:p-6 relative hover:shadow-lg transition-all cursor-pointer">
+                <div class="card-header flex justify-between items-center mb-6">
+                  <div class="card-title text-lg font-bold">Кэшбэк и бонусы</div>
+                  <div class="notification-badge w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-xs animate-pulse">1</div>
+                </div>
+                <div class="cashback-info mb-6">
+                  <div class="cashback-amount text-3xl font-bold text-yellow-400 mb-2">1 234 ₽</div>
+                  <div class="cashback-label text-sm text-gray-400">Доступно для вывода</div>
+                </div>
+                <div class="bonus-cards">
+                  <div class="bonus-card">
+                    <span class="text-2xl">🦁</span>
+                    <div class="bonus-name">Тинькофф</div>
+                    <div class="bonus-value">5%</div>
+                  </div>
+                  <div class="bonus-card">
+                    <span class="text-2xl">👑</span>
+                    <div class="bonus-name">ИГА</div>
+                    <div class="bonus-value">3%</div>
+                  </div>
+                  <div class="bonus-card">
+                    <span class="text-2xl">⭐</span>
+                    <div class="bonus-name">Базовый</div>
+                    <div class="bonus-value">1%</div>
+                  </div>
+                </div>
+                <div class="card-footer flex justify-between items-center">
+                  <div class="next-level">
+                    <div class="level-label text-sm text-gray-400 mb-2">До следующего уровня</div>
+                    <div class="progress-bar h-2 w-32 bg-gray-700 rounded-full">
+                      <div class="progress-fill h-full bg-yellow-400 rounded-full" style="width: 75%"></div>
+                    </div>
+                  </div>
+                  <div class="view-all text-sm text-blue-400 flex items-center hover:text-blue-300 transition-colors">
+                    Все бонусы
+                    <span class="material-symbols-outlined ml-1">arrow_forward</span>
                   </div>
                 </div>
               </div>
@@ -219,5 +302,62 @@
         </div>
       </div>
     </div>
+
+    <!-- Voice Assistant Button -->
+    <button class="voice-assistant-btn" onclick="toggleVoiceAssistant()">
+      <span class="material-symbols-outlined">mic</span>
+    </button>
+
+    <!-- Voice Assistant Modal -->
+    <div class="voice-assistant-modal" id="voiceAssistantModal">
+      <div class="voice-assistant-header">
+        <div class="voice-assistant-title">Голосовой помощник</div>
+        <div class="voice-assistant-close" onclick="toggleVoiceAssistant()">
+          <span class="material-symbols-outlined">close</span>
+        </div>
+      </div>
+      <div class="voice-assistant-content">
+        <div class="voice-assistant-wave">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+        <div class="voice-assistant-text">
+          Слушаю вас...
+        </div>
+        <div class="voice-assistant-suggestions">
+          <div class="suggestion-chip">Показать баланс</div>
+          <div class="suggestion-chip">Перевести деньги</div>
+          <div class="suggestion-chip">История операций</div>
+          <div class="suggestion-chip">Кэшбэк и бонусы</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleVoiceAssistant() {
+        const modal = document.getElementById('voiceAssistantModal');
+        modal.classList.toggle('active');
+        
+        if (modal.classList.contains('active')) {
+          // Имитация распознавания речи
+          setTimeout(() => {
+            const text = modal.querySelector('.voice-assistant-text');
+            text.textContent = 'Я вас понял! Чем могу помочь?';
+          }, 2000);
+        }
+      }
+
+      // Закрытие по клику вне модального окна
+      document.addEventListener('click', (e) => {
+        const modal = document.getElementById('voiceAssistantModal');
+        const btn = document.querySelector('.voice-assistant-btn');
+        if (!modal.contains(e.target) && !btn.contains(e.target) && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+        }
+      });
+    </script>
   </body>
 </html>
