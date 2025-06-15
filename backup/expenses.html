@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Траты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="main-content">
+            <header class="header">
+                <a href="index.html">
+                <span class="material-symbols-outlined text-white">close</span>
+                </a>
+                <h1 class="text-white text-xl font-semibold">Операции</h1>
+                <span class="material-symbols-outlined text-blue-400">bar_chart</span>
+            </header>
+
+            <div class="search-bar">
+                <span class="material-symbols-outlined text-gray-400">search</span>
+                <input type="text" placeholder="Поиск" class="search-input">
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-button active">Июнь</button>
+                <button class="filter-button">Счета и карты</button>
+                <button class="filter-button">Без переводов</button>
+            </div>
+
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <p class="amount">6 183 ₽</p>
+                    <p class="label">Траты</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill expenses-progress"></div>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <p class="amount">10 580 ₽</p>
+                    <p class="label">Доходы</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill income-progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-banner">
+                <img src="https://assets.tinkoff.ru/f/e7b003e0-05e8-4a11-8c43-e1d3e85e1b21.png" alt="Promo image" class="promo-image">
+                <div class="promo-content">
+                    <h3 class="promo-title">Как взять от лета всё</h3>
+                    <p class="promo-description">Забирайте сотни предложений с кэшбэком и бонусами</p>
+                </div>
+                <span class="material-symbols-outlined close-button">close</span>
+            </div>
+
+            <div class="transaction-list">
+                <h2 class="transaction-date">13 июня <span class="text-gray-400">-488 ₽</span></h2>
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <img src="https://img.icons8.com/color/48/000000/building.png" alt="Building icon">
+                    </div>
+                    <div class="transaction-details">
+                        <p class="transaction-name">Яроблтранском</p>
+                        <p class="transaction-category">Местный транспорт</p>
+                    </div>
+                    <div class="transaction-amount">
+                        <p>-84,50 ₽</p>
+                        <p class="transaction-card">Дебетовая карта</p>
+                    </div>
+                </div>
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <img src="https://img.icons8.com/color/48/000000/bus.png" alt="Bus icon">
+                    </div>
+                    <div class="transaction-details">
+                        <p class="transaction-name">Городской транспорт Яросла</p>
+                        <p class="transaction-category">Транспорт</p>
+                    </div>
+                    <div class="transaction-amount">
+                        <p>-38 ₽</p>
+                        <p class="transaction-card">Дебетовая карта</p>
+                    </div>
+                </div>
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <img src="https://img.icons8.com/color/48/000000/bus-stop.png" alt="Bus stop icon">
+                    </div>
+                    <div class="transaction-details">
+                        <p class="transaction-name">Автовокзал Рыбинск</p>
+                        <p class="transaction-category">Местный транспорт</p>
+                    </div>
+                    <div class="transaction-amount">
+                        <p>-342 ₽</p>
+                        <p class="transaction-card">Дебетовая карта</p>
+                    </div>
+                </div>
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <img src="https://img.icons8.com/color/48/000000/ruble.png" alt="Ruble icon">
+                    </div>
+                    <div class="transaction-details">
+                        <p class="transaction-name">Внесение наличных через</p>
+                        <p class="transaction-category">Пополнения</p>
+                    </div>
+                    <div class="transaction-amount">
+                        <p class="text-green-500">+5 000 ₽</p>
+                        <p class="transaction-card">Дебетовая карта</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <div class="nav-items">
+                <a href="#" class="nav-item active">
+                    <span class="material-symbols-outlined">payments</span>
+                    <span class="text-xs">Платежи</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">credit_card</span>
+                    <span class="text-xs">Карты</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">trending_up</span>
+                    <span class="text-xs">Инвестиции</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">more_horiz</span>
+                    <span class="text-xs">Еще</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text-xs">Профиль</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</body>
+</html> 

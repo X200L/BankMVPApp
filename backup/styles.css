@@ -1005,8 +1005,6 @@ video {
   font-family: Open Sans, sans-serif;
   padding-bottom: 80px; /* Add padding for mobile nav */
   overflow-x: hidden; /* Prevent horizontal scroll */
-  max-width: 100vw;
-  margin: 0 auto;
 }
 
 /* Sidebar */
@@ -1067,54 +1065,27 @@ video {
 /* Bonus Cards */
 .bonus-cards {
   display: flex;
-  flex-direction: row;
-  gap: 12px;
-  margin-top: 12px;
-  padding: 12px;
-  background: rgba(31, 41, 55, 0.5);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  justify-content: center;
+  gap: 3px;
+  margin-top: 6px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
 }
 
 .bonus-card {
-  flex: 0 0 auto;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0;
+  transition: transform 0.2s;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .bonus-card:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.bonus-card .text-2xl {
-  font-size: 24px;
-  margin-bottom: 4px;
-}
-
-.bonus-card .bonus-name {
-  font-size: 12px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2px;
-}
-
-.bonus-card .bonus-value {
-  font-size: 13px;
-  font-weight: 600;
-  color: #FFDD2D;
-  text-shadow: 0 0 10px rgba(255, 221, 45, 0.3);
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* Main Content */
@@ -1122,8 +1093,6 @@ video {
   flex: 1;
   width: 100%;
   overflow-x: hidden;
-  max-width: 100vw;
-  margin: 0 auto;
 }
 
 /* Header */
@@ -1137,9 +1106,6 @@ video {
   background: rgba(31, 41, 55, 0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 40;
 }
 
 @media (min-width: 768px) {
@@ -1180,7 +1146,6 @@ video {
   -ms-overflow-style: none;
   width: 100%;
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 .stories-section::-webkit-scrollbar {
@@ -1233,7 +1198,7 @@ video {
 /* Stats Section */
 .stats-section {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   padding: 0 16px;
   margin-bottom: 16px;
@@ -1243,7 +1208,6 @@ video {
 
 @media (min-width: 768px) {
   .stats-section {
-    grid-template-columns: repeat(2, 1fr);
     padding: 0 32px;
     gap: 24px;
   }
@@ -1273,7 +1237,7 @@ video {
 /* Quick Actions */
 .quick-actions {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
   padding: 0 16px;
   margin-bottom: 16px;
@@ -1958,46 +1922,4 @@ h1, h2, h3, .text-xl, .text-2xl {
 
 .text-gray-400 {
   color: #9CA3AF;
-}
-
-/* Media Queries */
-@media (min-width: 768px) {
-  .app-container {
-    padding-bottom: 0;
-  }
-
-  .header {
-    padding: 24px 32px;
-  }
-
-  .stories-section {
-    padding: 0 32px;
-  }
-
-  .stats-section {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 32px;
-    gap: 24px;
-  }
-
-  .quick-actions {
-    padding: 0 32px;
-    gap: 24px;
-  }
-
-  .balance-card {
-    margin: 0 32px 16px;
-    padding: 24px;
-    width: calc(100% - 64px);
-  }
-
-  .promo-banner {
-    margin: 0 32px 32px;
-    padding: 24px;
-    width: calc(100% - 64px);
-  }
-
-  .mobile-nav {
-    display: none;
-  }
 } 
