@@ -42,9 +42,7 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: #111827;
-  color: #F3F4F6;
-  font-family: 'Open Sans', sans-serif;
+  background: black;
 }
 hr {
   border-top-width: 1px;
@@ -1000,8 +998,8 @@ video {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #111827;
-  color: #F3F4F6;
+  background-color: black;
+  color: white;
   font-family: Open Sans, sans-serif;
   padding-bottom: 80px; /* Add padding for mobile nav */
   overflow-x: hidden; /* Prevent horizontal scroll */
@@ -1015,18 +1013,16 @@ video {
 @media (min-width: 768px) {
   .sidebar {
     display: block;
-    width: 240px;
+    width: 320px;
     min-height: 100vh;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 16px;
-    background: rgba(31, 41, 55, 0.8);
-    backdrop-filter: blur(10px);
+    border-right: 1px solid rgb(31 41 55);
+    padding: 24px;
   }
 }
 
 @media (min-width: 1024px) {
   .sidebar {
-    width: 280px;
+    width: 384px;
   }
 }
 
@@ -1034,58 +1030,45 @@ video {
 .nav-menu {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  transition: all 0.2s;
-  color: #9CA3AF;
-  font-size: 14px;
+  padding: 12px;
+  border-radius: 24px;
+  transition: all 0.15s;
 }
 
 .nav-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: #F3F4F6;
+  background-color: rgb(17 24 39);
 }
 
 .nav-item.active {
-  background: linear-gradient(135deg, #FFDD2D, #FFB800);
-  color: #111827;
-}
-
-.nav-item .material-symbols-outlined {
-  font-size: 20px;
+  background-color: rgb(17 24 39);
+  color: rgb(96 165 250);
 }
 
 /* Bonus Cards */
 .bonus-cards {
   display: flex;
-  gap: 8px;
-  margin-top: 16px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  gap: 12px;
 }
 
 .bonus-card {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s;
-  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.15s;
 }
 
 .bonus-card:hover {
   transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.15);
 }
 
 /* Main Content */
@@ -1103,9 +1086,6 @@ video {
   padding: 12px 16px;
   width: 100%;
   box-sizing: border-box;
-  background: rgba(31, 41, 55, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -1179,9 +1159,6 @@ video {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.15s;
-  background: rgba(31, 41, 55, 0.8);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -1214,13 +1191,11 @@ video {
 }
 
 .stats-card {
-  background-color: rgba(31, 41, 55, 0.8);
-  border-radius: 24px;
+  background-color: rgb(17 24 39);
+  border-radius: 72px;
   padding: 16px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: background-color 0.15s;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
 }
 
 @media (min-width: 768px) {
@@ -1230,8 +1205,7 @@ video {
 }
 
 .stats-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: rgb(31 41 55);
 }
 
 /* Quick Actions */
@@ -1262,33 +1236,29 @@ video {
 .action-icon {
   width: 56px;
   height: 56px;
-  background-color: rgba(31, 41, 55, 0.8);
+  background-color: rgb(31 41 55);
   border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 4px;
-  transition: all 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.15s;
 }
 
 .action-item:hover .action-icon {
-  background-color: #374151;
-  transform: scale(1.05);
+  background-color: rgb(55 65 81);
 }
 
 /* Balance Card */
 .balance-card {
-  background-color: rgba(31, 41, 55, 0.8);
-  border-radius: 24px;
+  background-color: rgb(17 24 39);
+  border-radius: 72px;
   margin: 0 16px 16px;
   padding: 16px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: background-color 0.15s;
   cursor: pointer;
   width: calc(100% - 32px);
   box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
 }
 
 @media (min-width: 768px) {
@@ -1300,8 +1270,7 @@ video {
 }
 
 .balance-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: rgb(31 41 55);
 }
 
 .balance-header {
@@ -1363,10 +1332,10 @@ video {
 
 /* Promo Banner */
 .promo-banner {
-  background: linear-gradient(135deg, #F59E0B, #FBBF24);
+  background-image: linear-gradient(to right, rgb(190 24 93), rgb(219 39 119));
   border-radius: 24px;
   margin: 0 16px 24px;
-  padding: 20px;
+  padding: 16px;
   position: relative;
   display: flex;
   align-items: center;
@@ -1415,16 +1384,6 @@ video {
   font-size: 18px;
 }
 
-.promo-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-}
-
 /* Transaction List */
 .transaction-list {
   padding: 0 16px;
@@ -1454,29 +1413,27 @@ video {
   gap: 12px;
   padding: 12px 0;
   border-bottom: 1px solid rgb(31 41 55);
-  background: rgba(31, 41, 55, 0.8);
-  border-radius: 16px;
-  margin-bottom: 12px;
-  padding: 16px;
-  transition: transform 0.2s;
 }
 
 .transaction-item:last-child {
   border-bottom: none;
 }
 
-.transaction-item:hover {
-  transform: translateX(4px);
-}
-
 .transaction-icon {
   width: 48px;
   height: 48px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #7C3AED, #A78BFA);
+  border-radius: 9999px;
+  background-color: rgb(31 41 55);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.transaction-icon img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%); /* Adjust as needed for icon visibility */
 }
 
 .transaction-details {
@@ -1516,9 +1473,8 @@ video {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(31, 41, 55, 0.8);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: black;
+  border-top: 1px solid rgb(31 41 55);
   padding-top: 4px;
   padding-bottom: 16px;
   z-index: 50;
@@ -1780,13 +1736,12 @@ video {
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: rgba(31, 41, 55, 0.8);
-  border-radius: 20px;
-  padding: 12px 20px;
+  background-color: rgb(31 41 55);
+  border-radius: 9999px;
+  padding: 8px 16px;
   margin: 16px;
   width: calc(100% - 32px);
   box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -1797,16 +1752,16 @@ video {
 }
 
 .search-input {
-  background: transparent;
+  background: none;
   border: none;
   outline: none;
-  color: #F3F4F6;
+  color: white;
   flex: 1;
   padding-left: 8px;
 }
 
 .search-input::placeholder {
-  color: #9CA3AF;
+  color: rgb(156 163 175);
 }
 
 /* Filter Buttons */
@@ -1828,25 +1783,21 @@ video {
 }
 
 .filter-button {
-  background: rgba(31, 41, 55, 0.8);
-  color: #F3F4F6;
+  background-color: rgb(31 41 55);
+  color: white;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 9999px;
   white-space: nowrap;
   cursor: pointer;
-  transition: all 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.15s;
 }
 
 .filter-button:hover {
-  background: #374151;
-  transform: translateY(-1px);
+  background-color: rgb(55 65 81);
 }
 
 .filter-button.active {
-  background: linear-gradient(135deg, #7C3AED, #A78BFA);
-  border: none;
-  color: white;
+  background-color: rgb(59 130 246);
 }
 
 /* Summary Cards */
@@ -1866,11 +1817,9 @@ video {
 }
 
 .summary-card {
-  background-color: rgba(31, 41, 55, 0.8);
+  background-color: rgb(17 24 39);
   border-radius: 24px;
   padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
 }
 
 .summary-card .amount {
@@ -1886,40 +1835,23 @@ video {
 }
 
 .progress-bar {
-  background: #374151;
+  background-color: rgb(31 41 55);
   height: 8px;
-  border-radius: 12px;
+  border-radius: 9999px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  border-radius: 12px;
-  transition: width 0.3s ease;
+  border-radius: 9999px;
 }
 
 .expenses-progress {
   width: 60%; /* Adjust based on actual data */
-  background: linear-gradient(135deg, #7C3AED, #A78BFA);
+  background-color: rgb(59 130 246); /* Example color */
 }
 
 .income-progress {
   width: 80%; /* Adjust based on actual data */
-  background: linear-gradient(135deg, #10B981, #34D399);
-}
-
-/* Material Icons */
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 1;
-  color: #A78BFA;
-}
-
-/* Typography */
-h1, h2, h3, .text-xl, .text-2xl {
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.text-gray-400 {
-  color: #9CA3AF;
+  background-color: rgb(22 101 52); /* Example color */
 } 
