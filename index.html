@@ -302,5 +302,62 @@
         </div>
       </div>
     </div>
+
+    <!-- Voice Assistant Button -->
+    <button class="voice-assistant-btn" onclick="toggleVoiceAssistant()">
+      <span class="material-symbols-outlined">mic</span>
+    </button>
+
+    <!-- Voice Assistant Modal -->
+    <div class="voice-assistant-modal" id="voiceAssistantModal">
+      <div class="voice-assistant-header">
+        <div class="voice-assistant-title">Голосовой помощник</div>
+        <div class="voice-assistant-close" onclick="toggleVoiceAssistant()">
+          <span class="material-symbols-outlined">close</span>
+        </div>
+      </div>
+      <div class="voice-assistant-content">
+        <div class="voice-assistant-wave">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+        <div class="voice-assistant-text">
+          Слушаю вас...
+        </div>
+        <div class="voice-assistant-suggestions">
+          <div class="suggestion-chip">Показать баланс</div>
+          <div class="suggestion-chip">Перевести деньги</div>
+          <div class="suggestion-chip">История операций</div>
+          <div class="suggestion-chip">Кэшбэк и бонусы</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleVoiceAssistant() {
+        const modal = document.getElementById('voiceAssistantModal');
+        modal.classList.toggle('active');
+        
+        if (modal.classList.contains('active')) {
+          // Имитация распознавания речи
+          setTimeout(() => {
+            const text = modal.querySelector('.voice-assistant-text');
+            text.textContent = 'Я вас понял! Чем могу помочь?';
+          }, 2000);
+        }
+      }
+
+      // Закрытие по клику вне модального окна
+      document.addEventListener('click', (e) => {
+        const modal = document.getElementById('voiceAssistantModal');
+        const btn = document.querySelector('.voice-assistant-btn');
+        if (!modal.contains(e.target) && !btn.contains(e.target) && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+        }
+      });
+    </script>
   </body>
 </html>
